@@ -1,0 +1,96 @@
+.movie-list {
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center cards horizontally */
+  gap: 20px; /* Add spacing between rows */
+  padding: 20px;
+
+  .movie-card {
+    background-color: #464444;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%; /* Full width with some padding */
+    max-width: 600px; /* Limit the width of the card */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-bottom: 2px solid #ddd;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #dcd7d7;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    // Style for the button when the movie is already in the watchlist
+    button:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+.rating {
+  margin-top: 10px;
+  p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+
+  .star {
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &.selected {
+      color: #ffd700; /* Gold color for selected stars */
+    }
+
+    &:hover {
+      color: #ffa500; /* Orange color on hover */
+    }
+  }
+}

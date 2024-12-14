@@ -1,0 +1,68 @@
+.movie-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }
+
+  .movie-list {
+    display: flex; // Change from grid to flex
+    flex-direction: row; // Ensure the items are aligned in a row
+    flex-wrap: wrap; // Allow items to wrap to the next row if they exceed the container's width
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: flex-start; // Align items to the start of the row
+  }
+
+  .movie-card {
+    width: 100%;
+    max-width: 220px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .movie-details {
+      padding: 15px;
+      text-align: center;
+
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #c9c6c6;
+      }
+    }
+  }
+}

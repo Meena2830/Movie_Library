@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Dark background for contrast */
+  color: #fff; /* Light text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 70px; /* To avoid overlap with fixed header */
+  font-size: 2.5rem;
+}
+
+input {
+  padding: 8px 15px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Movie List Styles */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #1c1c1c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  max-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Header and Navigation Bar */
+/* Header and Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 15px;
+
+      &:last-child {
+        margin-left: 88%; /* Push watchlist icon to the right */
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        align-items: center; /* Align icon and text horizontally */
+        justify-content: center; /* Center the items */
+
+        &:hover {
+          color: #f39c12;
+        }
+
+        svg {
+          margin-right: 15px; /* Space between the icon and text */
+        }
+
+        span {
+          font-size: 14px; /* Adjust text size */
+          color: white; /* Text color */
+          font-weight: 500;
+          margin-right: 15px; /* Make the text bolder */
+        }
+      }
+    }
+  }
+}
+
+/* Watchlist Page Styles */
+.watch-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.watch-list p {
+  font-size: 1rem;
+  color: #bbb;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    margin: 0 10px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .movie-card {
+    max-width: 150px;
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    button {
+      font-size: 0.8rem;
+    }
+  }
+}
